@@ -1,0 +1,154 @@
+@import "variables";
+@import "mixins";
+
+main {
+    height: 100vh;
+    background: linear-gradient(#F8F7F7 60%, white 40%);
+    .signupSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .container {
+            background: #FBFBFB;
+            border: 2px solid $primary-light;
+            box-shadow: 0px 0px 50px -9px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            max-width: 479px;
+            .signupForm {
+                padding: 51px 58px 23px;
+                h3 {
+                    font-family: $secondary-font;
+                    font-style: normal;
+                    font-weight: $font-semibold;
+                    font-size: 22px;
+                    line-height: 130%;
+                    letter-spacing: -0.01em;
+                    color: #3F3F3F;
+                    margin: 0 0 27.5px 0;
+                    text-align: center;
+                }
+                form {
+                    .fields {
+                        display: grid;
+                        position: relative;
+                        label {
+                            font-family: $secondary-font;
+                            font-style: normal;
+                            font-weight: $font-semibold;
+                            font-size: 14px;
+                            line-height: 151.5%;
+                            letter-spacing: -0.01em;
+                            color: $font-gray;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            .red {
+                                color: red;
+                            }
+                            .forgotPassword {
+                                font-family: $secondary-font;
+                                font-style: normal;
+                                font-weight: $font-semibold;
+                                font-size: 14px;
+                                line-height: 151.5%;
+                                letter-spacing: -0.01em;
+                                color: $primary-light;
+                                cursor: pointer;
+                            }   
+                        }
+                        input {
+                            background: #FCFCFC;
+                            border: 2px solid #ECECEC;
+                            border-radius: 4px;
+                            font-family: $primary-font;
+                            font-style: normal;
+                            font-weight: $font-normal;
+                            font-size: 16px;
+                            line-height: 151.5%;
+                            text-align: left;
+                            letter-spacing: -0.01em;
+                            color: #5D5D5D;
+                            margin: 8px 0 27.5px 0;
+                            padding: 7px 32px;
+                            &:focus, &:active {
+                                border: 5px solid rgba(51, 119, 255, 0.2);
+                            }
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+                        .relative {
+                            position: relative;
+                        }
+                        .visibilityIcon {
+                            position: absolute;
+                            right: 12px;
+                            top: 70%;
+                            cursor: pointer;
+                        }
+                    }
+                    .buttons {
+                        .btnBlue {
+                            @include button;
+                            background: $primary-dark;
+                            border: 2px solid $primary-dark;
+                            color: $font-white;
+                            svg {
+                                margin: auto 14px auto 0;
+                            }
+                        }
+                        .btnGoogle {
+                            @include button;
+                            border: 2px solid $primary-light;
+                            color: $primary-light;
+                            background: $font-white;
+                            svg {
+                                margin: auto 12px auto 0;
+                            }
+                        }
+                        .orText {
+                            font-family: $secondary-font;
+                            font-style: normal;
+                            font-weight: $font-bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: rgba(0, 0, 0, 0.61);
+                            margin: 0 0 13px 0;
+                            text-align: center;
+                        }   
+                    }
+                    
+                }
+                .notes {
+                    font-family: $primary-font;
+                    font-style: normal;
+                    font-weight: $font-normal;
+                    font-size: 12px;
+                    line-height: 120%;
+                    text-align: center;
+                    letter-spacing: -0.01em;
+                    color: $font-gray;
+                    a {
+                        color: $primary-light;
+                        font-weight: $font-medium;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        .signupSection {
+            .container {
+                margin: 0 16px;
+                .signupForm {
+                    padding: 51px 20px 23px;
+                }
+            }
+        }
+    }
+}
